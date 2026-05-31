@@ -1,0 +1,5 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "ChameleonMeshNode_Custom") (type "KiCad") (uri "${KIPRJMOD}/lib/ChameleonMeshNode_Custom.pretty") (options "") (descr "Chameleon Mesh Node Project local footprints (Wio-WM1110 LGA-80 from official Seeed zip)"))
+	(lib (name "Seeed_XIAO") (type "KiCad") (uri "${KIPRJMOD}/lib/Seeed_XIAO.pretty") (options "") (descr "Seeed Studio XIAO Series footprints (CC-BY-SA 4.0; see lib/LICENSE_Seeed_OPL)"))
+)

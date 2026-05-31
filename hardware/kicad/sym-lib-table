@@ -1,0 +1,5 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "ChameleonMeshNode_Custom") (type "KiCad") (uri "${KIPRJMOD}/lib/ChameleonMeshNode_Custom.kicad_symdir") (options "") (descr "Project-local symbols (Wio-WM1110 placeholder + future custom)"))
+	(lib (name "Seeed_XIAO_Series") (type "KiCad") (uri "${KIPRJMOD}/lib/Seeed_XIAO_Series.kicad_sym") (options "") (descr "Seeed Studio XIAO Series symbols (vendored from Seeed OPL KiCad Library, CC-BY-SA 4.0; see lib/LICENSE_Seeed_OPL)"))
+)

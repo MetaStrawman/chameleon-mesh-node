@@ -1,0 +1,18 @@
+# Licensing
+
+The Chameleon Mesh Node is released under a **multi-license** model, by
+component type. Full license texts are in [`LICENSES/`](LICENSES/). Source
+files carry an `SPDX-License-Identifier:` header naming which one applies.
+
+| Component | Path(s) | License | SPDX |
+|---|---|---|---|
+| **Hardware design** (schematic, PCB, footprints, gerbers) | `hardware/` | CERN Open Hardware Licence v2 – Strongly Reciprocal | `CERN-OHL-S-2.0` |
+| **Meshtastic firmware variant** (derives from GPL Meshtastic firmware) | `firmware/variant.h`, `firmware/platformio.ini` | GNU General Public License v3.0 or later | `GPL-3.0-or-later` |
+| **Tooling / generators / docs** (Python composers, ESP32-C5 companion stub) | `hardware/scripts/`, ESP32-C5 stub | MIT | `MIT` |
+
+Third-party components vendored or referenced (Seeed XIAO footprints,
+Wio-WM1110 footprint, KiCad-bundled footprints) retain their upstream
+licenses — see [`NOTICE.md`](NOTICE.md).
+
+All licenses above are OSI-/OSHW-recognized and satisfy the Meshtastic
+Build-Off 2026 requirement that all submitted work be open-source.
