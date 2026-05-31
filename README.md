@@ -3,8 +3,8 @@
 > A rugged, solar-capable, dual-radio environmental telemetry node built on the Meshtastic + LoRa stack.
 
 **Submission:** Seeed Studio Meshtastic Build-Off 2026
-**Status:** Design complete & verified — routed, DRC-clean (0 errors), Gerbers exported. **Pre-fabrication** (first article not yet ordered).
-**Hardware revision:** v1.0
+**Status:** Design complete & verified — routed, DRC-clean (0 errors, 0 unconnected) under JLCPCB 2-layer rules after the v1.1 placement fix, Gerbers exported. **Pre-fabrication** (first article not yet ordered).
+**Hardware revision:** v1.1
 **License:** Multi-license open source — CERN-OHL-S-2.0 (hardware), GPL-3.0-or-later (Meshtastic firmware variant), MIT (tooling). See [`LICENSE`](LICENSE) and [`NOTICE.md`](NOTICE.md).
 
 ![Chameleon Mesh Node v1.0 — top](assets/chameleon_mesh_node_v1_top.png)
@@ -88,7 +88,7 @@ Wio-WM1110 build environment. See [`firmware/README.md`](firmware/README.md).
 
 - Schematic ERC: **0 errors / 0 warnings** (KiCad 10).
 - PCB: routed (2-layer, GND-stitching vias), 3 GND zones poured, RF-zoned placement.
-- Post-route DRC: **0 errors / 14 warnings** (silkscreen/courtyard advisories on dense modules; reviewed and accepted — see `docs/`).
+- Post-route DRC (v1.1): **0 errors (error severity), 0 unconnected** under JLCPCB 2-layer rules; remaining items are silkscreen/courtyard advisories on dense modules (reviewed and accepted — see `docs/`). The v1.0 layout had a U2/J1 placement collision plus over-strict intra-connector and hole-edge clearance flags; all resolved in the v1.1 placement fix (U2 repositioned clear of the USB-C connector, affected signal/power nets re-routed, GND pour intact).
 - Gerbers + Excellon drill exported (`hardware/gerbers/`, also zipped in `hardware/kicad/gerbers_v11.zip`).
 - Board outline: ~60 × 40 mm, 2-layer FR-4; RF-zoned placement (radios on opposite edges) over a shared GND pour.
 

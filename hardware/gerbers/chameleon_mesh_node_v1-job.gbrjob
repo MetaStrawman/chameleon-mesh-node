@@ -5,13 +5,13 @@
       "Application": "Pcbnew",
       "Version": "10.0.3"
     },
-    "CreationDate": "2026-05-18T06:49:54-05:00"
+    "CreationDate": "2026-05-31T15:12:45-05:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "chameleon_mesh_node_v1",
       "GUID": "6368616d-656c-4656-9f6e-5f6d6573685f",
-      "Revision": "v1.0-DRAFT"
+      "Revision": "v1.0"
     },
     "Size": {
       "X": 60.1,
@@ -24,8 +24,8 @@
   "DesignRules": [
     {
       "Layers": "Outer",
-      "PadToPad": 0.2,
-      "PadToTrack": 0.2,
+      "PadToPad": 0.13,
+      "PadToTrack": 0.13,
       "TrackToTrack": 0.2,
       "MinLineWidth": 0.25,
       "TrackToRegion": 0.25,
@@ -41,6 +41,16 @@
     {
       "Path": "chameleon_mesh_node_v1-B_Cu.gbl",
       "FileFunction": "Copper,L2,Bot",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "chameleon_mesh_node_v1-F_Adhesive.gta",
+      "FileFunction": "Glue,Top",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "chameleon_mesh_node_v1-B_Adhesive.gba",
+      "FileFunction": "Glue,Bot",
       "FilePolarity": "Positive"
     },
     {
@@ -74,8 +84,38 @@
       "FilePolarity": "Negative"
     },
     {
+      "Path": "chameleon_mesh_node_v1-User_Drawings.gbr",
+      "FileFunction": "Other,User",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "chameleon_mesh_node_v1-User_Comments.gbr",
+      "FileFunction": "Other,User",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "chameleon_mesh_node_v1-User_Eco1.gbr",
+      "FileFunction": "Other,User",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "chameleon_mesh_node_v1-User_Eco2.gbr",
+      "FileFunction": "Other,User",
+      "FilePolarity": "Positive"
+    },
+    {
       "Path": "chameleon_mesh_node_v1-Edge_Cuts.gm1",
       "FileFunction": "Profile",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "chameleon_mesh_node_v1-F_Fab.gbr",
+      "FileFunction": "AssemblyDrawing,Top",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "chameleon_mesh_node_v1-B_Fab.gbr",
+      "FileFunction": "AssemblyDrawing,Bot",
       "FilePolarity": "Positive"
     }
   ],
