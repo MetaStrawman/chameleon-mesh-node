@@ -9,21 +9,21 @@ Quality / Completeness / Impact / Presentation.
 ## ✅ Done (this pass)
 - [x] Multi-license added — `LICENSE` map + `LICENSES/{CERN-OHL-S-2.0,GPL-3.0-or-later,MIT}.txt`.
 - [x] `NOTICE.md` — third-party attribution (Seeed XIAO CC-BY-SA-4.0, Wio footprint, KiCad libs, Meshtastic GPL).
-- [x] README rewritten — stale "awaiting routing/gerbers" status fixed → accurate fab-ready v1.0; added renders, "How it uses Meshtastic", design-state/DRC, roadmap, license sections.
+- [x] README rewritten — stale "awaiting routing/gerbers" status fixed → accurate fab-ready v1.1 (60x35); added renders, "How it uses Meshtastic", design-state/DRC, roadmap, license sections.
 - [x] Firmware proof-of-work — `firmware/variant.h` + `firmware/platformio.ini` (incremental variant on upstream Wio-WM1110 base; documents the 2 board deltas: BME280@0x76, C5-wake GPIO).
 - [x] Gerbers extracted to browsable `hardware/gerbers/` (12 files, v1.0).
 - [x] 3D renders generated headlessly → `assets/` (top + bottom).
 
 ## ⛔ Operator-only (cannot be done from here)
-- [ ] **Create the PUBLIC GitHub repo** — extract `chameleon_mesh_node/` as a *standalone* repo. **Do NOT push the private monorepo.** Nothing outside this folder may ship.
+- [x] **PUBLIC GitHub repo created & pushed** — `github.com/MetaStrawman/chameleon-mesh-node` (standalone; monorepo not pushed).
 - [ ] **Name + email + GitHub account** for the Issue submission template.
 - [ ] **File the submission Issue** at `github.com/Seeed-Projects/meshtastic-build-off-2026` (Issue → submission template).
-- [ ] Set the real copyright holder in `LICENSES/MIT.txt` (currently placeholder "Chameleon Mesh Node Project").
+- [x] Copyright holder set in `LICENSES/MIT.txt` (`Meta_Strawman`).
 
 ## ⚠️ Must-fix before publishing (gaps found, need a working session)
 - [x] **Footprint libraries committed.** The `lib/` directory (custom Wio-WM1110 LGA-80 footprint + symbol, Seeed XIAO footprints/symbols, Seeed OPL license) is included under `hardware/kicad/lib/`; the project opens and regenerates standalone.
 - [x] **OPSEC scrub complete.** Project-local custom library named `ChameleonMeshNode_Custom`; no internal program identifiers remain anywhere in the public tree.
-- [ ] **BOM with real part numbers.** Build-guide BOM lists passives as TBD; `gerbers_v11.zip` is gerbers+drill only (no BOM/POS CSV, no schematic PDF). Re-export from KiCad and commit `hardware/bom/` + schematic PDF to assets.
+- [x] **BOM + position file + schematic PDF committed** — `hardware/bom/{...-bom.csv,...-pos.csv}` + `hardware/...-schematic.pdf`, regenerated via kicad-cli from the OPSEC-clean source. (Part numbers: connectors/ICs specified; passives still TBD in build-guide.)
 - [ ] Verify + copy the upstream Seeed Wio-WM1110 KiCad library LICENSE into the vendored footprint dir (per `NOTICE.md`).
 - [ ] Add `SPDX-License-Identifier:` headers to `hardware/scripts/*.py` (MIT).
 
