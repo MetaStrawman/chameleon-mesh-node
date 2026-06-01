@@ -3,11 +3,11 @@
 > A rugged, solar-capable, dual-radio environmental telemetry node built on the Meshtastic + LoRa stack.
 
 **Submission:** Seeed Studio Meshtastic Build-Off 2026
-**Status:** Design complete & verified — routed, DRC-clean (0 errors, 0 unconnected) under JLCPCB 2-layer rules after the v1.1 placement fix, Gerbers exported. **Pre-fabrication** (first article not yet ordered).
+**Status:** Design complete & verified — routed, DRC-clean (0 errors, 0 unconnected) under JLCPCB 2-layer rules after the v1.1 board-truncation fix, Gerbers exported. **Pre-fabrication** (first article not yet ordered).
 **Hardware revision:** v1.1
 **License:** Multi-license open source — CERN-OHL-S-2.0 (hardware), GPL-3.0-or-later (Meshtastic firmware variant), MIT (tooling). See [`LICENSE`](LICENSE) and [`NOTICE.md`](NOTICE.md).
 
-![Chameleon Mesh Node v1.0 — top](assets/chameleon_mesh_node_v1_top.png)
+![Chameleon Mesh Node v1.1 — top](assets/chameleon_mesh_node_v1_top.png)
 
 *3D render (top). Bottom: [`assets/chameleon_mesh_node_v1_bottom.png`](assets/chameleon_mesh_node_v1_bottom.png). Renders are generated headlessly from the KiCad project via `kicad-cli pcb render`; the XIAO ESP32-C5 (U2) has no 3D model assigned and renders flat.*
 
@@ -28,13 +28,13 @@ This board pairs **two complementary radio subsystems on one PCB**:
 | Long-range mesh | Meshtastic LoRa + GNSS time-sync + Wi-Fi scan for opportunistic uplink | Seeed **Wio-WM1110** (Semtech LR1110 + Nordic nRF52840) |
 | Local-area + provisioning | Wi-Fi 6 / BLE 5 / 802.15.4 for setup, OTA, and bulk data offload to a passing operator's phone | Seeed **XIAO ESP32-C5** |
 
-Both radios cohabit one ~60×40 mm 2-layer board, with explicit RF zoning and a shared ground pour designed to keep mutual desense within acceptable limits for an environmental-sensing-class duty cycle.
+Both radios cohabit one ~60×35 mm 2-layer board, with explicit RF zoning and a shared ground pour designed to keep mutual desense within acceptable limits for an environmental-sensing-class duty cycle.
 
 ## Top-level specs
 
 | | |
 |---|---|
-| Dimensions | ~60 × 40 mm, 2-layer FR-4 |
+| Dimensions | ~60 × 35 mm, 2-layer FR-4 |
 | MCU | Nordic nRF52840 (Meshtastic firmware host) + Espressif ESP32-C5 (companion) |
 | Radios | Semtech LR1110 (sub-GHz LoRa, GNSS, passive Wi-Fi scan); Wi-Fi 6 / BLE 5 / 802.15.4 |
 | Power input | USB-C 5 V / LiPo single-cell 3.7 V |
@@ -60,7 +60,7 @@ chameleon_mesh_node/
 │   └── power-design.md      — solar input, charger, fuel-gauge, sleep budget
 ├── hardware/
 │   ├── kicad/               — KiCad 10 project (schematic, PCB, footprints, gerber zips)
-│   ├── gerbers/             — extracted v1.0 Gerbers + Excellon drill (fab-ready)
+│   ├── gerbers/             — extracted v1.1 Gerbers + Excellon drill (fab-ready)
 │   └── scripts/             — Python composers that regenerate schematic + PCB from source
 ├── firmware/                — Meshtastic nRF52840 variant (variant.h + platformio.ini) + ESP32-C5 stub
 └── enclosure/cad/           — 3D-printable case (planned, post-fab)
@@ -88,9 +88,9 @@ Wio-WM1110 build environment. See [`firmware/README.md`](firmware/README.md).
 
 - Schematic ERC: **0 errors / 0 warnings** (KiCad 10).
 - PCB: routed (2-layer, GND-stitching vias), 3 GND zones poured, RF-zoned placement.
-- Post-route DRC (v1.1): **0 errors (error severity), 0 unconnected** under JLCPCB 2-layer rules; remaining items are silkscreen/courtyard advisories on dense modules (reviewed and accepted — see `docs/`). The v1.0 layout had a U2/J1 placement collision plus over-strict intra-connector and hole-edge clearance flags; all resolved in the v1.1 placement fix (U2 repositioned clear of the USB-C connector, affected signal/power nets re-routed, GND pour intact).
+- Post-route DRC (v1.1): **0 errors (error severity), 0 unconnected** under JLCPCB 2-layer rules; remaining items are silkscreen/courtyard advisories on dense modules (reviewed and accepted — see `docs/`). The v1.0 layout placed the USB-C receptacle ~7 mm inset from the top edge, which would block the cable plug shroud from seating (caught in 3D review, invisible to DRC). Resolved in v1.1 by truncating the board top edge to 60×35 mm so the USB-C face sits flush with the board edge; mounting holes H1/H2 were moved inside the new outline and the GND pour refilled. The U2/J1 courtyard overlap was re-measured at ~0.52 mm physical clearance (a CAD buffer-zone advisory, not contact) and accepted.
 - Gerbers + Excellon drill exported (`hardware/gerbers/`, also zipped in `hardware/kicad/gerbers_v11.zip`).
-- Board outline: ~60 × 40 mm, 2-layer FR-4; RF-zoned placement (radios on opposite edges) over a shared GND pour.
+- Board outline: ~60 × 35 mm, 2-layer FR-4; RF-zoned placement (radios on opposite edges) over a shared GND pour.
 
 ## Roadmap
 
