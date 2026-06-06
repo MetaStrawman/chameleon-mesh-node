@@ -5,12 +5,12 @@
       "Application": "Pcbnew",
       "Version": "10.0.3"
     },
-    "CreationDate": "2026-06-06T07:30:47-05:00"
+    "CreationDate": "2026-06-04T21:10:06-05:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
-      "Name": "chameleon_mesh_node_v1",
-      "GUID": "6368616d-656c-4656-9f6e-5f6d6573685f",
+      "Name": "board",
+      "GUID": "626f6172-642e-46b6-9963-61645f706362",
       "Revision": "v1.0-DRAFT"
     },
     "Size": {
@@ -34,87 +34,87 @@
   ],
   "FilesAttributes": [
     {
-      "Path": "chameleon_mesh_node_v1-F_Cu.gtl",
+      "Path": "board-F_Cu.gbr",
       "FileFunction": "Copper,L1,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "chameleon_mesh_node_v1-B_Cu.gbl",
+      "Path": "board-B_Cu.gbr",
       "FileFunction": "Copper,L2,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "chameleon_mesh_node_v1-F_Adhesive.gta",
+      "Path": "board-F_Adhesive.gbr",
       "FileFunction": "Glue,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "chameleon_mesh_node_v1-B_Adhesive.gba",
+      "Path": "board-B_Adhesive.gbr",
       "FileFunction": "Glue,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "chameleon_mesh_node_v1-F_Paste.gtp",
+      "Path": "board-F_Paste.gbr",
       "FileFunction": "SolderPaste,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "chameleon_mesh_node_v1-B_Paste.gbp",
+      "Path": "board-B_Paste.gbr",
       "FileFunction": "SolderPaste,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "chameleon_mesh_node_v1-F_Silkscreen.gto",
+      "Path": "board-F_Silkscreen.gbr",
       "FileFunction": "Legend,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "chameleon_mesh_node_v1-B_Silkscreen.gbo",
+      "Path": "board-B_Silkscreen.gbr",
       "FileFunction": "Legend,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "chameleon_mesh_node_v1-F_Mask.gts",
+      "Path": "board-F_Mask.gbr",
       "FileFunction": "SolderMask,Top",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "chameleon_mesh_node_v1-B_Mask.gbs",
+      "Path": "board-B_Mask.gbr",
       "FileFunction": "SolderMask,Bot",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "chameleon_mesh_node_v1-User_Drawings.gbr",
+      "Path": "board-User_Drawings.gbr",
       "FileFunction": "Other,User",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "chameleon_mesh_node_v1-User_Comments.gbr",
+      "Path": "board-User_Comments.gbr",
       "FileFunction": "Other,User",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "chameleon_mesh_node_v1-User_Eco1.gbr",
+      "Path": "board-User_Eco1.gbr",
       "FileFunction": "Other,User",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "chameleon_mesh_node_v1-User_Eco2.gbr",
+      "Path": "board-User_Eco2.gbr",
       "FileFunction": "Other,User",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "chameleon_mesh_node_v1-Edge_Cuts.gm1",
+      "Path": "board-Edge_Cuts.gbr",
       "FileFunction": "Profile",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "chameleon_mesh_node_v1-F_Fab.gbr",
+      "Path": "board-F_Fab.gbr",
       "FileFunction": "AssemblyDrawing,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "chameleon_mesh_node_v1-B_Fab.gbr",
+      "Path": "board-B_Fab.gbr",
       "FileFunction": "AssemblyDrawing,Bot",
       "FilePolarity": "Positive"
     }

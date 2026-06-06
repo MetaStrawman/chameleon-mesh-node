@@ -1,11 +1,11 @@
 %TF.GenerationSoftware,KiCad,Pcbnew,10.0.3*%
-%TF.CreationDate,2026-06-06T07:30:47-05:00*%
-%TF.ProjectId,chameleon_mesh_node_v1,6368616d-656c-4656-9f6e-5f6d6573685f,v1.0-DRAFT*%
+%TF.CreationDate,2026-06-04T21:10:06-05:00*%
+%TF.ProjectId,board,626f6172-642e-46b6-9963-61645f706362,v1.0-DRAFT*%
 %TF.SameCoordinates,Original*%
 %TF.FileFunction,AssemblyDrawing,Bot*%
 %FSLAX46Y46*%
 G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
-G04 Created by KiCad (PCBNEW 10.0.3) date 2026-06-06 07:30:47*
+G04 Created by KiCad (PCBNEW 10.0.3) date 2026-06-04 21:10:06*
 %MOMM*%
 %LPD*%
 G01*
