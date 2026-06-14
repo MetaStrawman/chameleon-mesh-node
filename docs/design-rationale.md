@@ -2,7 +2,7 @@
 
 This document explains the key layout and manufacturability decisions behind the v1.2 board.
 It exists so a reviewer (or a future builder) can see *why* each choice was made, not just *what*
-the gerbers show. Target process: Seeed Fusion, 2-layer, 1 oz copper, 6 mil (0.15 mm) trace/space.
+the gerbers show. Target process: standard 2-layer, 1 oz copper, 6 mil (0.15 mm) trace/space.
 
 ## Board at a glance
 - 60 × 34 mm, 2-layer, USB-C powered, Meshtastic-compatible.
@@ -43,7 +43,7 @@ inrush/brown-out transients), then via'd up to the XIAO's 5 V input. Net result:
 copper-to-edge clearance with no impact on signal routing.
 
 ### USB-C high-density pads
-The USB-C connector's own 0.5 mm-pitch pads sit at 0.15 mm clearance — within Seeed Fusion's 6 mil
+The USB-C connector's own 0.5 mm-pitch pads sit at 0.15 mm clearance — within a standard 6 mil fab
 capability, but tighter than the board's conservative default rule. A **scoped design rule** relaxes
 clearance to 0.15 mm *only* for the connector's internal pads, leaving the rest of the board on the
 conservative default. The XIAO's unused module pads that sit under the connector shield are tied to

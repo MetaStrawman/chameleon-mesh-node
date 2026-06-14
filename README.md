@@ -9,7 +9,7 @@
 
 ![Chameleon Mesh Node v1.2 — top](assets/chameleon_mesh_node_v1_top.png)
 
-*3D render (top). Bottom: [`assets/chameleon_mesh_node_v1_bottom.png`](assets/chameleon_mesh_node_v1_bottom.png). Renders are generated headlessly from the KiCad project via `kicad-cli pcb render`; the XIAO ESP32-C5 (U2) has no 3D model assigned and renders flat.*
+*3D render (top). Bottom: [`assets/chameleon_mesh_node_v1_bottom.png`](assets/chameleon_mesh_node_v1_bottom.png).*
 
 ## What it is
 
@@ -86,20 +86,19 @@ Wio-WM1110 build environment. See [`firmware/README.md`](firmware/README.md).
 - Schematic ERC: **0 errors / 0 warnings** (KiCad 10).
 - PCB: 2-layer routed (top-copper signal, bottom-copper VBUS detour with vias), 3 GND zones poured, RF-zoned placement.
 - Post-route DRC: **0 errors / 0 unconnected / 31 warnings** (cosmetic silkscreen-over-pad, silk-to-edge, library-footprint, and one dangling-track advisory; non-blocking for fabrication — see `docs/design-rationale.md`).
-- Gerbers + Excellon drill exported (`hardware/gerbers/`, also zipped in `hardware/kicad/gerbers_v11.zip`).
+- Gerbers + Excellon drill exported (`hardware/gerbers/`).
 - v1.1 → v1.2: top edge truncated 60×40 → 60×34 mm so the USB-C mouth is flush with the board edge (the earlier board had the connector inset and the cable could not seat); the DNP BQ24074 charger (U1) and the LiPo connector (J2) were deleted (their dead VBAT traces shorted the relocated mounting hole), leaving the board USB-powered only; mounting holes relocated, routing and GND zones refilled.
 
-## Roadmap
+## Status
 
-- [x] Schematic netlist + ERC clean
-- [x] PCB placement (RF-zoned) + routing + GND pour
-- [x] DRC clean (0 errors) + Gerber/drill export
-- [x] 3D render verification (headless)
-- [ ] Order first-article prototype (JLCPCB / PCBWay)
-- [ ] Bring-up: power smoke test, Meshtastic flash (SWD), mesh-join test
-- [ ] Measure deep-sleep current vs. <50 µA target
-- [ ] Upstream the Meshtastic variant (PR to meshtastic/firmware)
-- [ ] Enclosure CAD
+The board is **design-complete and verified** — schematic + ERC clean, RF-zoned
+placement, routing and ground pour done, DRC clean (0 errors / 0 unconnected), and
+the full fabrication package (gerbers, drill, BOM, placement, schematic PDF, 3D
+renders) is exported and committed. This revision is fab-ready.
+
+**Next:** first-article prototype, board bring-up (power smoke test, Meshtastic
+flash over SWD, mesh-join test), deep-sleep current measurement, upstreaming the
+Meshtastic variant, and an enclosure design.
 
 ## License
 
