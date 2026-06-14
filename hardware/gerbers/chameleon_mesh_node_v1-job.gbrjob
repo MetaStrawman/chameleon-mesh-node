@@ -5,17 +5,17 @@
       "Application": "Pcbnew",
       "Version": "10.0.3"
     },
-    "CreationDate": "2026-06-06T07:30:47-05:00"
+    "CreationDate": "2026-06-13T23:35:41-05:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "chameleon_mesh_node_v1",
       "GUID": "6368616d-656c-4656-9f6e-5f6d6573685f",
-      "Revision": "v1.0-DRAFT"
+      "Revision": "v1.2"
     },
     "Size": {
       "X": 60.1,
-      "Y": 40.1
+      "Y": 34.1
     },
     "LayerNumber": 2,
     "BoardThickness": 1.6,
@@ -41,16 +41,6 @@
     {
       "Path": "chameleon_mesh_node_v1-B_Cu.gbl",
       "FileFunction": "Copper,L2,Bot",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "chameleon_mesh_node_v1-F_Adhesive.gta",
-      "FileFunction": "Glue,Top",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "chameleon_mesh_node_v1-B_Adhesive.gba",
-      "FileFunction": "Glue,Bot",
       "FilePolarity": "Positive"
     },
     {
@@ -84,38 +74,8 @@
       "FilePolarity": "Negative"
     },
     {
-      "Path": "chameleon_mesh_node_v1-User_Drawings.gbr",
-      "FileFunction": "Other,User",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "chameleon_mesh_node_v1-User_Comments.gbr",
-      "FileFunction": "Other,User",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "chameleon_mesh_node_v1-User_Eco1.gbr",
-      "FileFunction": "Other,User",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "chameleon_mesh_node_v1-User_Eco2.gbr",
-      "FileFunction": "Other,User",
-      "FilePolarity": "Positive"
-    },
-    {
       "Path": "chameleon_mesh_node_v1-Edge_Cuts.gm1",
       "FileFunction": "Profile",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "chameleon_mesh_node_v1-F_Fab.gbr",
-      "FileFunction": "AssemblyDrawing,Top",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "chameleon_mesh_node_v1-B_Fab.gbr",
-      "FileFunction": "AssemblyDrawing,Bot",
       "FilePolarity": "Positive"
     }
   ],

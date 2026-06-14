@@ -1,21 +1,19 @@
-# Architecture — Chameleon Mesh Node v1
+# Architecture — Chameleon Mesh Node v1.2
 
 ## Block diagram
 
 ```
               ┌─────────────────────────────────────────────────────────┐
               │                                                         │
-   USB-C ─────┤ U1 BQ24074  ──(VSYS)──┬── U2 XIAO ESP32-C5 ──── ANT_24G │
-   (5V in)    │ LiPo charger          │   Wi-Fi 6 / BLE 5 / 802.15.4    │
-   J1         │ USB-priority,         │                                 │
-              │ solar OK to 6 V       ├── U3 Wio-WM1110 ──┬── ANT_LORA  │
-              │                       │  LR1110 + nRF52840 ├── ANT_GNSS │
-              │                       │  (Meshtastic host) └── (Wi-Fi   │
-              │                       │                       scan: shared
-              │                       │                       with C5)  │
-   LiPo  ─────┤ J2 JST-PH         (3.3V via internal LDOs in each module)
-   battery    │                       │                                 │
-              │                       └── U4 BME280 (I²C, addr 0x76)    │
+   USB-C ─────┤ U2 XIAO ESP32-C5 ──(+3V3)──┬───────────────── ANT_24G  │
+   (5V in)    │ Wi-Fi 6 / BLE 5 / 802.15.4 │                            │
+   J1         │ onboard 3.3 V regulator    │                            │
+              │                            ├── U3 Wio-WM1110 ──┬─ ANT_LORA│
+              │                            │  LR1110 + nRF52840 ├─ ANT_GNSS│
+              │                            │  (Meshtastic host) └─ (Wi-Fi │
+              │                            │                      scan)   │
+              │                            │                              │
+              │                            └── U4 BME280 (I²C, addr 0x76) │
               │                                                         │
               └─────────────────────────────────────────────────────────┘
 ```
@@ -24,7 +22,7 @@
 
 The nRF52840 inside the Wio-WM1110 hosts the Meshtastic stack. It owns the LoRa radio, the GNSS receiver (LR1110 has both on one die), and the Meshtastic mesh state machine. This is the "always-on" side of the board: it spends most of its life in deep sleep, wakes on radio events or scheduled transmissions, and goes back down.
 
-The ESP32-C5 is the "burst-on" side. It stays unpowered (or in deep-sleep) by default. The operator wakes it intentionally during provisioning, OTA firmware updates, or bulk-data offload. Its Wi-Fi 6 / BLE / 802.15.4 stack consumes meaningful current and is gated behind explicit operator intent rather than running continuously.
+The ESP32-C5 is the "burst-on" side. It stays in firmware deep-sleep by default. The operator wakes it intentionally during provisioning, OTA firmware updates, or bulk-data offload. Its Wi-Fi 6 / BLE / 802.15.4 stack consumes meaningful current and is gated behind explicit operator intent rather than running continuously.
 
 ## Radio zoning
 
@@ -38,9 +36,9 @@ The BME280 is the only I²C peripheral in v1, on the ESP32-C5's bus at address 0
 
 ## Power tree summary
 
-- Single 5 V input via USB-C (J1, 14-pin)
-- BQ24074 charges a single-cell LiPo on J2 (JST-PH)
-- VSYS feeds both U2 and U3 module-internal LDOs
-- Battery monitoring is via the BQ24074's internal current sense (status only); no dedicated fuel gauge in v1 (planned for v2)
+- Single 5 V input via USB-C (J1)
+- The XIAO ESP32-C5 (U2) onboard 3.3 V regulator supplies the +3V3 rail
+- +3V3 feeds the Wio-WM1110 (U3) and BME280 (U4) module-internal LDOs
+- USB-powered only; no onboard charger, battery connector, or fuel gauge on v1.2
 
-See `power-design.md` for the full power budget and sleep-current analysis.
+See `power-design.md` for the USB power tree and per-module power notes.

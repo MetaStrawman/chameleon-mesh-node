@@ -1,0 +1,1009 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-06-13T23:35:49",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.3",
+    "schematic_parity": [],
+    "source": "chameleon_mesh_node_v1.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [GND] on F.Cu, length 2.8161 mm",
+                    "pos": {
+                        "x": 48.4699,
+                        "y": 33.975
+                    },
+                    "uuid": "381888e4-6495-4e63-b914-0e516051f981"
+                },
+                {
+                    "description": "Track [+3V3] on F.Cu, length 3.2129 mm",
+                    "pos": {
+                        "x": 45.98,
+                        "y": 35.0
+                    },
+                    "uuid": "771bd399-fe9b-45e7-9a65-b453559f65d5"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad A1 [GND] of J1",
+                    "pos": {
+                        "x": 20.0,
+                        "y": 7.0
+                    },
+                    "uuid": "973433db-dbe2-4b63-a2c7-f47e00988053"
+                },
+                {
+                    "description": "PTH pad A4 [VBUS] of J1",
+                    "pos": {
+                        "x": 20.85,
+                        "y": 7.0
+                    },
+                    "uuid": "99d6436b-fa55-4f52-8e98-47cec3bfc02d"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad A4 [VBUS] of J1",
+                    "pos": {
+                        "x": 20.85,
+                        "y": 7.0
+                    },
+                    "uuid": "99d6436b-fa55-4f52-8e98-47cec3bfc02d"
+                },
+                {
+                    "description": "PTH pad A5 [CC1] of J1",
+                    "pos": {
+                        "x": 21.7,
+                        "y": 7.0
+                    },
+                    "uuid": "8f0ab270-50b1-4135-8a7e-b7c59f6e45ee"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad A5 [CC1] of J1",
+                    "pos": {
+                        "x": 21.7,
+                        "y": 7.0
+                    },
+                    "uuid": "8f0ab270-50b1-4135-8a7e-b7c59f6e45ee"
+                },
+                {
+                    "description": "PTH pad A6 [<no net>] of J1",
+                    "pos": {
+                        "x": 22.55,
+                        "y": 7.0
+                    },
+                    "uuid": "68d6c6ab-c45c-499e-82bd-63b20a3129a8"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad A6 [<no net>] of J1",
+                    "pos": {
+                        "x": 22.55,
+                        "y": 7.0
+                    },
+                    "uuid": "68d6c6ab-c45c-499e-82bd-63b20a3129a8"
+                },
+                {
+                    "description": "PTH pad A7 [<no net>] of J1",
+                    "pos": {
+                        "x": 23.4,
+                        "y": 7.0
+                    },
+                    "uuid": "b8d12c18-f03d-4993-a88e-e1b6720ba265"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad A7 [<no net>] of J1",
+                    "pos": {
+                        "x": 23.4,
+                        "y": 7.0
+                    },
+                    "uuid": "b8d12c18-f03d-4993-a88e-e1b6720ba265"
+                },
+                {
+                    "description": "PTH pad A8 [<no net>] of J1",
+                    "pos": {
+                        "x": 24.25,
+                        "y": 7.0
+                    },
+                    "uuid": "41cc4085-e8d1-4114-876c-ebd9daa78a9f"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad A8 [<no net>] of J1",
+                    "pos": {
+                        "x": 24.25,
+                        "y": 7.0
+                    },
+                    "uuid": "41cc4085-e8d1-4114-876c-ebd9daa78a9f"
+                },
+                {
+                    "description": "PTH pad A9 [VBUS] of J1",
+                    "pos": {
+                        "x": 25.1,
+                        "y": 7.0
+                    },
+                    "uuid": "ff3ac5f8-191a-4b29-9c51-26f675661566"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad A9 [VBUS] of J1",
+                    "pos": {
+                        "x": 25.1,
+                        "y": 7.0
+                    },
+                    "uuid": "ff3ac5f8-191a-4b29-9c51-26f675661566"
+                },
+                {
+                    "description": "PTH pad A12 [GND] of J1",
+                    "pos": {
+                        "x": 25.95,
+                        "y": 7.0
+                    },
+                    "uuid": "013f0886-478f-4df3-843e-83c45ed19dd1"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad B1 [GND] of J1",
+                    "pos": {
+                        "x": 25.95,
+                        "y": 8.35
+                    },
+                    "uuid": "065ce6fb-d3bc-4f0f-8c50-2d505cb1962b"
+                },
+                {
+                    "description": "PTH pad B4 [VBUS] of J1",
+                    "pos": {
+                        "x": 25.1,
+                        "y": 8.35
+                    },
+                    "uuid": "99ccba2d-a49d-486f-9691-c7fdd26402cf"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad B4 [VBUS] of J1",
+                    "pos": {
+                        "x": 25.1,
+                        "y": 8.35
+                    },
+                    "uuid": "99ccba2d-a49d-486f-9691-c7fdd26402cf"
+                },
+                {
+                    "description": "PTH pad B5 [CC2] of J1",
+                    "pos": {
+                        "x": 24.25,
+                        "y": 8.35
+                    },
+                    "uuid": "e119bdb8-7639-43f7-8432-92c041d6914b"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad B5 [CC2] of J1",
+                    "pos": {
+                        "x": 24.25,
+                        "y": 8.35
+                    },
+                    "uuid": "e119bdb8-7639-43f7-8432-92c041d6914b"
+                },
+                {
+                    "description": "PTH pad B6 [<no net>] of J1",
+                    "pos": {
+                        "x": 23.4,
+                        "y": 8.35
+                    },
+                    "uuid": "fab6ff1c-b2f6-4f20-bc26-9ec338d77b24"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad B6 [<no net>] of J1",
+                    "pos": {
+                        "x": 23.4,
+                        "y": 8.35
+                    },
+                    "uuid": "fab6ff1c-b2f6-4f20-bc26-9ec338d77b24"
+                },
+                {
+                    "description": "PTH pad B7 [<no net>] of J1",
+                    "pos": {
+                        "x": 22.55,
+                        "y": 8.35
+                    },
+                    "uuid": "60bcd0e0-3717-4c6b-b499-416004cfd7c6"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad B7 [<no net>] of J1",
+                    "pos": {
+                        "x": 22.55,
+                        "y": 8.35
+                    },
+                    "uuid": "60bcd0e0-3717-4c6b-b499-416004cfd7c6"
+                },
+                {
+                    "description": "PTH pad B8 [<no net>] of J1",
+                    "pos": {
+                        "x": 21.7,
+                        "y": 8.35
+                    },
+                    "uuid": "e3838170-a370-4746-a3b2-9aaf15ea5082"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad B8 [<no net>] of J1",
+                    "pos": {
+                        "x": 21.7,
+                        "y": 8.35
+                    },
+                    "uuid": "e3838170-a370-4746-a3b2-9aaf15ea5082"
+                },
+                {
+                    "description": "PTH pad B9 [VBUS] of J1",
+                    "pos": {
+                        "x": 20.85,
+                        "y": 8.35
+                    },
+                    "uuid": "8d976016-b965-4db1-817f-1974b76ce035"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad B9 [VBUS] of J1",
+                    "pos": {
+                        "x": 20.85,
+                        "y": 8.35
+                    },
+                    "uuid": "8d976016-b965-4db1-817f-1974b76ce035"
+                },
+                {
+                    "description": "PTH pad B12 [GND] of J1",
+                    "pos": {
+                        "x": 20.0,
+                        "y": 8.35
+                    },
+                    "uuid": "0ab0e897-5d63-4ef1-9ee6-3700773a5942"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [+3V3] on F.Cu, length 0.5000 mm",
+                    "pos": {
+                        "x": 9.4563,
+                        "y": 7.75
+                    },
+                    "uuid": "b34c1b7e-4eca-432b-aab3-90f638451bd0"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 6.0
+                    },
+                    "uuid": "a4730f2e-4f45-4abd-99f4-e2118b437aa9"
+                },
+                {
+                    "description": "Reference field of H2",
+                    "pos": {
+                        "x": 57.0,
+                        "y": 5.5
+                    },
+                    "uuid": "96c3defd-f951-4555-91d9-499bb9560be5"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 0.0,
+                        "y": 6.0
+                    },
+                    "uuid": "a4730f2e-4f45-4abd-99f4-e2118b437aa9"
+                },
+                {
+                    "description": "Reference field of H1",
+                    "pos": {
+                        "x": 3.0,
+                        "y": 5.5
+                    },
+                    "uuid": "297115a0-948e-476e-8cf6-30e4778b61ec"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Footprint 'MountingHole_M2.5' not found in library 'ChameleonMeshNode_Custom'",
+            "items": [
+                {
+                    "description": "Footprint H3",
+                    "pos": {
+                        "x": 3.0,
+                        "y": 37.0
+                    },
+                    "uuid": "2398b99a-e019-4872-b2dc-bd7dbd7d9eda"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "Footprint 'MountingHole_M2.5' not found in library 'ChameleonMeshNode_Custom'",
+            "items": [
+                {
+                    "description": "Footprint H2",
+                    "pos": {
+                        "x": 57.0,
+                        "y": 9.0
+                    },
+                    "uuid": "4b4ec54e-18a4-4940-a72e-2e28c269aa9d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "Footprint 'MountingHole_M2.5' not found in library 'ChameleonMeshNode_Custom'",
+            "items": [
+                {
+                    "description": "Footprint H1",
+                    "pos": {
+                        "x": 3.0,
+                        "y": 9.0
+                    },
+                    "uuid": "7f5319c7-fc4e-4e14-8980-4b47c00920f5"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "Footprint 'MountingHole_M2.5' not found in library 'ChameleonMeshNode_Custom'",
+            "items": [
+                {
+                    "description": "Footprint H4",
+                    "pos": {
+                        "x": 57.0,
+                        "y": 37.0
+                    },
+                    "uuid": "a49498e9-ebfb-4986-8afe-5ed98ce67a30"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of U2 on F.Silkscreen",
+                    "pos": {
+                        "x": 34.875,
+                        "y": 16.763
+                    },
+                    "uuid": "2b80542c-5088-4f89-ae32-3400cf894ca1"
+                },
+                {
+                    "description": "Reference field of U2",
+                    "pos": {
+                        "x": 28.0,
+                        "y": 17.6
+                    },
+                    "uuid": "a9f5f5dd-597c-45dd-b31d-a35c3963eed2"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of J1 on F.Silkscreen",
+                    "pos": {
+                        "x": 18.38,
+                        "y": 15.73
+                    },
+                    "uuid": "c01587b4-5945-4a87-a8f4-2059f0309e2e"
+                },
+                {
+                    "description": "Segment of U2 on F.Silkscreen",
+                    "pos": {
+                        "x": 23.595,
+                        "y": 16.763
+                    },
+                    "uuid": "fead6daa-b9f4-4bd1-a131-b5d2cd3184de"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Arc of U2 on F.Silkscreen",
+                    "pos": {
+                        "x": 24.09875,
+                        "y": 15.75302
+                    },
+                    "uuid": "7a58f637-14d7-4804-b127-f1d029b5d1e6"
+                },
+                {
+                    "description": "Segment of J1 on F.Silkscreen",
+                    "pos": {
+                        "x": 18.38,
+                        "y": 15.73
+                    },
+                    "uuid": "c01587b4-5945-4a87-a8f4-2059f0309e2e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of J1 on F.Silkscreen",
+                    "pos": {
+                        "x": 27.57,
+                        "y": 13.0
+                    },
+                    "uuid": "18fc60dd-4c01-407e-ab3f-1bb1756bba07"
+                },
+                {
+                    "description": "Segment of U2 on F.Silkscreen",
+                    "pos": {
+                        "x": 24.098728,
+                        "y": 15.253
+                    },
+                    "uuid": "b90ae92d-7c1a-4689-bf64-c3528a3ea3ee"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U2 on F.Silkscreen",
+                    "pos": {
+                        "x": 19.0,
+                        "y": 35.813
+                    },
+                    "uuid": "df0486b4-d04f-4201-a301-beede6e15862"
+                },
+                {
+                    "description": "Pad 5 [I2C_SDA] of U2 on F.Cu",
+                    "pos": {
+                        "x": 19.835,
+                        "y": 29.84
+                    },
+                    "uuid": "84711cb2-d222-464e-bcd5-f76af75cc612"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U2 on F.Silkscreen",
+                    "pos": {
+                        "x": 19.0,
+                        "y": 35.813
+                    },
+                    "uuid": "df0486b4-d04f-4201-a301-beede6e15862"
+                },
+                {
+                    "description": "Pad 6 [I2C_SCL] of U2 on F.Cu",
+                    "pos": {
+                        "x": 19.835,
+                        "y": 32.38
+                    },
+                    "uuid": "aabcfc3b-fa72-4e48-95d1-d53474158cc0"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U2 on F.Silkscreen",
+                    "pos": {
+                        "x": 19.0,
+                        "y": 35.813
+                    },
+                    "uuid": "df0486b4-d04f-4201-a301-beede6e15862"
+                },
+                {
+                    "description": "Pad 7 [UART_BRIDGE_TX] of U2 on F.Cu",
+                    "pos": {
+                        "x": 19.835,
+                        "y": 34.92
+                    },
+                    "uuid": "3e086061-1f3f-4b1e-9354-920126d40249"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U2 on F.Silkscreen",
+                    "pos": {
+                        "x": 19.0,
+                        "y": 35.813
+                    },
+                    "uuid": "df0486b4-d04f-4201-a301-beede6e15862"
+                },
+                {
+                    "description": "Pad 1 [GND] of U2 on F.Cu",
+                    "pos": {
+                        "x": 19.835,
+                        "y": 19.68
+                    },
+                    "uuid": "c68f6b12-dcf5-46b1-b159-2eef9023b0ac"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U2 on F.Silkscreen",
+                    "pos": {
+                        "x": 19.0,
+                        "y": 35.813
+                    },
+                    "uuid": "df0486b4-d04f-4201-a301-beede6e15862"
+                },
+                {
+                    "description": "Pad 2 [<no net>] of U2 on F.Cu",
+                    "pos": {
+                        "x": 19.835,
+                        "y": 22.22
+                    },
+                    "uuid": "525b09fc-9099-4274-98c3-45f84d0591ab"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U2 on F.Silkscreen",
+                    "pos": {
+                        "x": 19.0,
+                        "y": 35.813
+                    },
+                    "uuid": "df0486b4-d04f-4201-a301-beede6e15862"
+                },
+                {
+                    "description": "Pad 3 [<no net>] of U2 on F.Cu",
+                    "pos": {
+                        "x": 19.835,
+                        "y": 24.76
+                    },
+                    "uuid": "99cc76a7-0a78-4868-871b-c214ecac5525"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U2 on F.Silkscreen",
+                    "pos": {
+                        "x": 19.0,
+                        "y": 35.813
+                    },
+                    "uuid": "df0486b4-d04f-4201-a301-beede6e15862"
+                },
+                {
+                    "description": "Pad 4 [<no net>] of U2 on F.Cu",
+                    "pos": {
+                        "x": 19.835,
+                        "y": 27.3
+                    },
+                    "uuid": "8038b67b-b3bf-4a3e-b790-40857963c957"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U2 on F.Silkscreen",
+                    "pos": {
+                        "x": 36.78,
+                        "y": 35.813
+                    },
+                    "uuid": "4cd8add0-8a8c-468d-ba6f-b86787c288af"
+                },
+                {
+                    "description": "Pad 12 [+3V3] of U2 on F.Cu",
+                    "pos": {
+                        "x": 36.0,
+                        "y": 24.76
+                    },
+                    "uuid": "eb6539ef-4d84-4ae5-bc4e-237dae21b9ef"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U2 on F.Silkscreen",
+                    "pos": {
+                        "x": 36.78,
+                        "y": 35.813
+                    },
+                    "uuid": "4cd8add0-8a8c-468d-ba6f-b86787c288af"
+                },
+                {
+                    "description": "Pad 13 [GND] of U2 on F.Cu",
+                    "pos": {
+                        "x": 36.0,
+                        "y": 22.22
+                    },
+                    "uuid": "c8744fbe-93c9-4c54-84bc-435357de679f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U2 on F.Silkscreen",
+                    "pos": {
+                        "x": 36.78,
+                        "y": 35.813
+                    },
+                    "uuid": "4cd8add0-8a8c-468d-ba6f-b86787c288af"
+                },
+                {
+                    "description": "Pad 14 [VBUS] of U2 on F.Cu",
+                    "pos": {
+                        "x": 36.0,
+                        "y": 19.68
+                    },
+                    "uuid": "fd579d63-bbef-4609-9252-aad3f944a314"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U2 on F.Silkscreen",
+                    "pos": {
+                        "x": 36.78,
+                        "y": 35.813
+                    },
+                    "uuid": "4cd8add0-8a8c-468d-ba6f-b86787c288af"
+                },
+                {
+                    "description": "Pad 8 [UART_BRIDGE_RX] of U2 on F.Cu",
+                    "pos": {
+                        "x": 36.0,
+                        "y": 34.92
+                    },
+                    "uuid": "974a7e29-b5d3-475c-b481-2bc14f5b3495"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U2 on F.Silkscreen",
+                    "pos": {
+                        "x": 36.78,
+                        "y": 35.813
+                    },
+                    "uuid": "4cd8add0-8a8c-468d-ba6f-b86787c288af"
+                },
+                {
+                    "description": "Pad 9 [<no net>] of U2 on F.Cu",
+                    "pos": {
+                        "x": 36.0,
+                        "y": 32.38
+                    },
+                    "uuid": "a553cc0b-22bc-49aa-9fb7-680c812e8abd"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U2 on F.Silkscreen",
+                    "pos": {
+                        "x": 36.78,
+                        "y": 35.813
+                    },
+                    "uuid": "4cd8add0-8a8c-468d-ba6f-b86787c288af"
+                },
+                {
+                    "description": "Pad 10 [<no net>] of U2 on F.Cu",
+                    "pos": {
+                        "x": 36.0,
+                        "y": 29.84
+                    },
+                    "uuid": "b650936d-c436-4d93-abb7-7957add5cfb1"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of U2 on F.Silkscreen",
+                    "pos": {
+                        "x": 36.78,
+                        "y": 35.813
+                    },
+                    "uuid": "4cd8add0-8a8c-468d-ba6f-b86787c288af"
+                },
+                {
+                    "description": "Pad 11 [<no net>] of U2 on F.Cu",
+                    "pos": {
+                        "x": 36.0,
+                        "y": 27.3
+                    },
+                    "uuid": "177728f1-7b02-41a6-9de4-bdaee546f6d9"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Arc of U2 on F.Silkscreen",
+                    "pos": {
+                        "x": 20.905,
+                        "y": 35.813
+                    },
+                    "uuid": "d09661c8-1ad3-40e9-8323-9dabc8f3f98b"
+                },
+                {
+                    "description": "Pad 7 [UART_BRIDGE_TX] of U2 on F.Cu",
+                    "pos": {
+                        "x": 19.835,
+                        "y": 34.92
+                    },
+                    "uuid": "3e086061-1f3f-4b1e-9354-920126d40249"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Arc of U2 on F.Silkscreen",
+                    "pos": {
+                        "x": 34.875,
+                        "y": 35.813
+                    },
+                    "uuid": "94189dc1-14b5-4f17-b9d3-0163ed99e583"
+                },
+                {
+                    "description": "Pad 8 [UART_BRIDGE_RX] of U2 on F.Cu",
+                    "pos": {
+                        "x": 36.0,
+                        "y": 34.92
+                    },
+                    "uuid": "974a7e29-b5d3-475c-b481-2bc14f5b3495"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Arc of U2 on F.Silkscreen",
+                    "pos": {
+                        "x": 34.875,
+                        "y": 18.668
+                    },
+                    "uuid": "77004ea5-53a4-40ab-b35c-7bdd22107e34"
+                },
+                {
+                    "description": "Pad 14 [VBUS] of U2 on F.Cu",
+                    "pos": {
+                        "x": 36.0,
+                        "y": 19.68
+                    },
+                    "uuid": "fd579d63-bbef-4609-9252-aad3f944a314"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Arc of U2 on F.Silkscreen",
+                    "pos": {
+                        "x": 20.905001,
+                        "y": 18.664001
+                    },
+                    "uuid": "4d9bf7a5-4ab4-48bb-b8ac-0a5ce4523642"
+                },
+                {
+                    "description": "Pad 1 [GND] of U2 on F.Cu",
+                    "pos": {
+                        "x": 19.835,
+                        "y": 19.68
+                    },
+                    "uuid": "c68f6b12-dcf5-46b1-b159-2eef9023b0ac"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        }
+    ]
+}

@@ -1,7 +1,6 @@
 "Refs","Value","Footprint","Qty","DNP"
 "J1","USB-C Power+Data","Connector_USB:USB_C_Receptacle_GCT_USB4085","1",""
-"J2","LiPo JST (PH 2.0)","Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal","1",""
-"U1","BQ24074RGT","Package_DFN_QFN:QFN-16-1EP_3x3mm_P0.5mm_EP1.675x1.675mm","1",""
 "U2","XIAO-ESP32-C5-SMD","Seeed_XIAO:XIAO-ESP32-C5-SMD","1",""
 "U3","Wio-WM1110","ChameleonMeshNode_Custom:Wio_WM1110_LGA80","1",""
 "U4","BME280","Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering","1",""
+"C1","100nF","Capacitor_SMD:C_0402_1005Metric","1",""

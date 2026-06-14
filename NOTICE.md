@@ -22,6 +22,5 @@ endorsement by the respective vendors. Trademarks are property of their owners.
 ## Silicon datasheets / reference designs
 
 Layout follows the manufacturer reference-design and layout guidelines for:
-Semtech LR1110, Nordic nRF52840, Espressif ESP32-C5, Bosch BME280, and
-Texas Instruments BQ24074. Datasheets are © their respective manufacturers
+Semtech LR1110, Nordic nRF52840, Espressif ESP32-C5, and Bosch BME280. Datasheets are © their respective manufacturers
 and are **not** redistributed in this repository.

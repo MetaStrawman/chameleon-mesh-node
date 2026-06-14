@@ -1,49 +1,34 @@
-# Power Design — Chameleon Mesh Node v1
+# Power Design — Chameleon Mesh Node v1.2
 
-## Goals
+## Summary
 
-1. Operate indefinitely on a single LiPo cell topped up by a 5-6 V solar panel during daylight hours.
-2. Reach < 50 µA in deep sleep so a 2000 mAh cell can carry the node through ≥ 7 cloudy days without solar.
-3. Charge from a standard USB-C wall adapter when on-bench for provisioning and OTA work.
-4. Survive a depleted battery + brownout → 5 V USB-C reconnect without operator intervention.
+v1.2 is **USB-powered only**. The board takes 5 V from the USB-C port on the
+Seeed XIAO ESP32-C5 (J1); the XIAO's onboard regulator supplies the 3.3 V rail
+to the rest of the board. The earlier onboard Li-ion charger (TI BQ24074, U1) and
+the LiPo battery connector (J2) were already populated DNP and were deleted in
+v1.2 — their dead VBAT traces were shorting the relocated mounting hole, and
+removing them cleared the short. There is no onboard battery charging, fuel gauge,
+or solar input on this revision.
 
-## Input + charger
+## Power tree
 
-Texas Instruments **BQ24074** is the regulator + linear charger. Selected over the more common MCP73831 for three reasons:
+- 5 V enters at the USB-C receptacle (J1) and the XIAO ESP32-C5's VBUS pin.
+- The XIAO's onboard 3.3 V regulator feeds the +3V3 rail.
+- +3V3 supplies the Wio-WM1110 module (U3) and the BME280 sensor (U4) through
+  their module-internal LDOs.
 
-- **USB-priority logic.** When 5 V is present on VIN, the chip switches the system load from the battery to VIN and uses the residual current capacity to charge the battery. The MCP73831 cannot do this without external pass FETs.
-- **Up to 6 V VIN tolerance.** Matches the Voc of a 5 V/1 W cell-phone-class solar panel under no-load conditions, which is the cheapest panel form factor the node is likely to be paired with.
-- **Programmable charge current** via an external `ISET` resistor. The board ships with a 1.13 kΩ resistor giving 1.1 A nominal, which a 2000 mAh LiPo can accept safely (0.55 C).
+## What v1.2 does NOT have
 
-## Sleep current target
+Considered and deliberately left off this revision:
 
-| State | Estimated current | Source |
-|---|---|---|
-| nRF52840 deep sleep (RAM retain, RTC) | 1.5 µA | Nordic datasheet |
-| LR1110 in OFF mode | < 1 µA | Semtech datasheet |
-| ESP32-C5 not powered (gated) | 0 µA | gated by GPIO |
-| BME280 in sleep | 0.1 µA | Bosch datasheet |
-| BQ24074 quiescent (no charge) | ~20 µA | TI datasheet |
-| 3.3 V LDO leak inside WM1110 | ~5 µA | inferred from module specs |
-| **TOTAL** | **~28 µA** | — |
+- Onboard Li-ion charging (the BQ24074 path) — removed; the board runs from USB.
+- Battery connector / single-cell LiPo operation — removed with the charger.
+- Solar / harvesting input.
+- Coulomb-counting fuel gauge or input-current monitor.
 
-Margin to the 50 µA target is comfortable, but assumes the ESP32-C5 is fully off (not deep-sleep). v1 ships with a hard-gate via a GPIO + load switch; the ESP32-C5 supply is cut entirely between operator-initiated sessions.
+## Battery operation (future revision)
 
-## Solar panel sizing
-
-A 5 V / 1 W panel produces ~ 200 mA at Pmax in full sun. With the BQ24074 charging at 1.1 A nominal, the panel will charge at panel-current-limited rate when sunlight is the only source. Realistic daily harvest from a 1 W panel placed in a moderately good outdoor location: ~ 200 mAh on a clear day, ~ 80 mAh on a heavily overcast day.
-
-A node consuming an average ~5 mA (Meshtastic 1-minute interval, position + telemetry beacons) draws ~ 120 mAh per day. The energy budget closes positive in average-daylight conditions; the battery exists to ride through several cloudy days, not to do the daily lifting.
-
-## Brownout + reconnect
-
-If the LiPo drops below 3.0 V, the BQ24074 disconnects the system load to protect the cell. On the next USB-C connection, the chip enters PRECHARGE for a brief soft-start, and the nRF52840 boot will re-run cleanly. The Meshtastic firmware persists its mesh state to flash so the node rejoins the network without re-provisioning.
-
-## What v1 does NOT have
-
-These are planned for v2 (out of scope for this contest submission):
-
-- Coulomb-counting fuel gauge (BQ27441 family) — v1 reports battery state via voltage approximation only
-- INA219 input-current monitor — useful for diagnosing solar performance in the field
-- Hard reset / wake button accessible from outside the enclosure
-- USB-C data lines (v1 is power-only on the USB-C; data is via UART/SWD pads only)
+A battery-capable revision would re-add a charger (e.g. BQ24074 or MCP73831) and a
+JST-PH cell connector on a board outline that keeps the charger's VBAT traces clear
+of the mounting holes. That is out of scope for this submission, which targets a
+verified, fabbable USB-powered two-radio board.

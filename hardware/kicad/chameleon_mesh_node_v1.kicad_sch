@@ -1,16 +1,16 @@
 (kicad_sch
 	(version 20240329)
-	(generator "kicad-python")
+	(generator "kicad")
 	(generator_version "10.0")
 	(uuid "08bddda4-777a-4465-8af5-7e5907361ace")
 	(paper "A3")
 	(title_block
 		(title "Chameleon Mesh Node v1")
 		(date "2026-05-16")
-		(rev "v1.0-DRAFT")
+		(rev "v1.2")
 		(company "Chameleon Mesh Node Project")
 		(comment 1 "Dual-radio telemetry motherboard")
-		(comment 2 "Seeed Meshtastic Build-Off entry — dual-radio mesh node")
+		(comment 2 "Seeed Meshtastic Build-Off entry / dual-radio")
 		(comment 3 "Wio-WM1110 + XIAO ESP32-C5 + BQ24074 + BME280")
 		(comment 4 "Logical net mapping; PCB routing deferred")
 	)
@@ -2706,72 +2706,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Battery_Management:BQ24074RGT")
-		(at 130.00 80.00 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "69a979ab-07f4-4ce6-adf3-a1fdd37ece64")
-		(property "Reference" "U1"
-			(at 130.00 62.00 0)
-			(effects (font (size 1.27 1.27)))
-		)
-		(property "Value" "BQ24074RGT"
-			(at 130.00 98.00 0)
-			(effects (font (size 1.27 1.27)))
-		)
-		(property "Footprint" "Package_DFN_QFN:QFN-16-1EP_3x3mm_P0.5mm_EP1.675x1.675mm"
-			(at 130.00 80.00 0)
-			(effects (font (size 1.27 1.27)) (hide yes))
-		)
-		(property "Datasheet" ""
-			(at 130.00 80.00 0)
-			(effects (font (size 1.27 1.27)) (hide yes))
-		)
-		(instances
-			(project ""
-				(path "/08bddda4-777a-4465-8af5-7e5907361ace"
-					(reference "U1") (unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Conn_01x02_Pin")
-		(at 50.00 140.00 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "8f726241-246a-4785-b616-894da44fa384")
-		(property "Reference" "J2"
-			(at 50.00 122.00 0)
-			(effects (font (size 1.27 1.27)))
-		)
-		(property "Value" "LiPo JST (PH 2.0)"
-			(at 50.00 158.00 0)
-			(effects (font (size 1.27 1.27)))
-		)
-		(property "Footprint" "Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal"
-			(at 50.00 140.00 0)
-			(effects (font (size 1.27 1.27)) (hide yes))
-		)
-		(property "Datasheet" ""
-			(at 50.00 140.00 0)
-			(effects (font (size 1.27 1.27)) (hide yes))
-		)
-		(instances
-			(project ""
-				(path "/08bddda4-777a-4465-8af5-7e5907361ace"
-					(reference "J2") (unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Seeed_XIAO_Series:XIAO-ESP32-C5-SMD")
 		(at 220.00 90.00 0)
 		(unit 1)
@@ -3002,78 +2936,6 @@
 		(effects (font (size 1.27 1.27)))
 		(uuid "273a263a-81e5-485a-a8b4-3355192a002f")
 	)
-	(global_label "VBUS"
-		(shape input)
-		(at 130.00 64.76 90)
-		(effects (font (size 1.27 1.27)))
-		(uuid "c2d26678-4aab-4b3c-8625-54b4f8def478")
-	)
-	(global_label "GND"
-		(shape input)
-		(at 130.00 95.24 270)
-		(effects (font (size 1.27 1.27)))
-		(uuid "eaf84b4c-042c-4475-b948-7121ef14e080")
-	)
-	(global_label "GND"
-		(shape input)
-		(at 130.00 95.24 270)
-		(effects (font (size 1.27 1.27)))
-		(uuid "5343547a-0bef-4119-b1e4-e74a475fc099")
-	)
-	(global_label "VBAT"
-		(shape input)
-		(at 142.70 77.46 0)
-		(effects (font (size 1.27 1.27)))
-		(uuid "c56be5e1-fe7b-4a78-89c4-c334c9cfbdde")
-	)
-	(global_label "VBAT"
-		(shape input)
-		(at 142.70 77.46 0)
-		(effects (font (size 1.27 1.27)))
-		(uuid "322d831b-0b95-4667-a506-7c5f44eb0be5")
-	)
-	(global_label "+3V3"
-		(shape input)
-		(at 142.70 69.84 0)
-		(effects (font (size 1.27 1.27)))
-		(uuid "57aa9faf-4fd1-4a25-8bfd-fe85aaa0a00c")
-	)
-	(global_label "+3V3"
-		(shape input)
-		(at 142.70 69.84 0)
-		(effects (font (size 1.27 1.27)))
-		(uuid "d0ed97ee-3c8b-48e3-8d68-b898ed8f9992")
-	)
-	(global_label "GND"
-		(shape input)
-		(at 117.30 74.92 180)
-		(effects (font (size 1.27 1.27)))
-		(uuid "11ead4f2-f420-4ff2-a741-a11a8314fe78")
-	)
-	(global_label "GND"
-		(shape input)
-		(at 117.30 82.54 180)
-		(effects (font (size 1.27 1.27)))
-		(uuid "10e805fd-7a30-4ff0-9686-e1d043ced975")
-	)
-	(global_label "GND"
-		(shape input)
-		(at 117.30 80.00 180)
-		(effects (font (size 1.27 1.27)))
-		(uuid "f1ef62ce-4165-4b39-ab17-f862cb4704d7")
-	)
-	(global_label "VBAT"
-		(shape input)
-		(at 55.08 140.00 0)
-		(effects (font (size 1.27 1.27)))
-		(uuid "1cfe6772-e36c-4352-8100-4ad158e1cdf1")
-	)
-	(global_label "GND"
-		(shape input)
-		(at 55.08 142.54 0)
-		(effects (font (size 1.27 1.27)))
-		(uuid "e14808ad-9adf-4cde-9ebf-73753b987b55")
-	)
 	(global_label "+3V3"
 		(shape input)
 		(at 246.67 79.84 0)
@@ -3115,12 +2977,6 @@
 		(at 246.67 72.22 0)
 		(effects (font (size 1.27 1.27)))
 		(uuid "71d0fc68-e756-46a1-9ea7-f9ad5bb8f77e")
-	)
-	(global_label "VBAT"
-		(shape input)
-		(at 233.97 116.67 270)
-		(effects (font (size 1.27 1.27)))
-		(uuid "0d7ccdad-3db0-44fa-974b-7d5163b919f2")
 	)
 	(global_label "I2C_SDA"
 		(shape input)
@@ -3404,13 +3260,6 @@
 	(no_connect (at 65.24 60.00) (uuid "91284fbc-b9f2-457b-9f06-385933393b9b"))
 	(no_connect (at 65.24 49.84) (uuid "24c19b4d-0e35-46f1-9f6b-1effd47069af"))
 	(no_connect (at 65.24 52.38) (uuid "b2fee142-6db2-4bae-90a7-107fedd5988f"))
-	(no_connect (at 142.70 82.54) (uuid "9c109ee3-4321-4114-9eb7-b29fdc15dc51"))
-	(no_connect (at 142.70 87.62) (uuid "a144beaa-991e-46a2-acb4-b250582e2fff"))
-	(no_connect (at 142.70 90.16) (uuid "b1ff5609-a47a-40cc-9709-a52efce0becf"))
-	(no_connect (at 117.30 87.62) (uuid "a25c0a0d-8917-4bc5-b6bb-8daca3e0ffae"))
-	(no_connect (at 117.30 77.46) (uuid "9c889755-ebd2-4a64-ba10-7f29b818c292"))
-	(no_connect (at 117.30 69.84) (uuid "3449934d-9a3f-4400-8402-3a69fc5094d0"))
-	(no_connect (at 117.30 90.16) (uuid "5d983026-d03f-4d78-91ea-4a86487b924c"))
 	(no_connect (at 198.41 72.22) (uuid "9bd3871f-7144-44d4-b017-41793cd80a2e"))
 	(no_connect (at 198.41 76.03) (uuid "ba53a09d-baab-40ba-a41c-3932679f2034"))
 	(no_connect (at 198.41 79.84) (uuid "b757008b-1138-4534-8eb1-af46ded09398"))
@@ -3472,6 +3321,49 @@
 	(no_connect (at 309.52 113.97) (uuid "c6fdcba7-6c9e-4997-9900-97d5c00245c5"))
 	(no_connect (at 309.52 108.89) (uuid "8e60914c-c943-4b2c-89d7-9eeff3d4b409"))
 	(no_connect (at 309.52 96.19) (uuid "3f46f404-fb23-466d-8a1f-4f75634f40a0"))
+	(no_connect (at 233.97 116.67) (uuid "fa000000-0000-4000-8000-000000000002"))
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 246.67 79.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fa000000-0000-4000-8000-000000000001")
+		(property "Reference" "#FLG3V3"
+			(at 246.67 74.84 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(property "Value" "PWR_FLAG"
+			(at 246.67 84.84 0)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" ""
+			(at 246.67 79.84 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(property "Datasheet" ""
+			(at 246.67 79.84 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(instances
+			(project ""
+				(path "/08bddda4-777a-4465-8af5-7e5907361ace"
+					(reference "#FLG3V3") (unit 1)
+				)
+			)
+		)
+	)
+	(text "NOTE: system block diagram. Discrete board-level passives (e.g. C1, the 100nF BME280 decoupling cap) are carried in the BOM, placement, and gerbers, not in this diagram."
+		(exclude_from_sim no)
+		(at 25.4 15.0 0)
+		(effects
+			(font (size 2 2))
+			(justify left bottom)
+		)
+		(uuid "fa000000-0000-4000-8000-0000000000c4")
+	)
 	(sheet_instances
 		(path "/" (page "1"))
 	)
